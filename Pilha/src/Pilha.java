@@ -1,18 +1,20 @@
 public class Pilha {
 	int elementos[];
 	int topo;
+	int tamanho;
 	
-	public Pilha() {
-		elementos = new int[10];
+	public Pilha(int tamanho) {
+		elementos = new int[tamanho];
 		topo = -1;
+		this.tamanho = tamanho;
 	}
 	
 	public void push(int e) {
 		if(isFull()) {
 			System.out.println("ta cheio");
 		}else {
-		topo++;
-		elementos[topo] = e;
+			topo++;
+			elementos[topo] = e;	
 		}
 	}
 	
@@ -38,7 +40,7 @@ public class Pilha {
 	}
 	
 	public boolean isFull() {
-		if(topo == 9) {
+		if(topo == this.tamanho-1) {
 			return true;
 		}else {
 			return false;
@@ -47,5 +49,14 @@ public class Pilha {
 	
 	public int top() {
 		return elementos[topo];
+	}
+	
+	public void imprimir() {
+		int i = topo;
+		while(i != -1){
+			System.out.println(elementos[i]);
+			i--;
+		}
+		System.out.println();
 	}
 }

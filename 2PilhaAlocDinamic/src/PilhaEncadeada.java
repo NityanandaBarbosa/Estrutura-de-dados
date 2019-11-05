@@ -34,4 +34,21 @@ public class PilhaEncadeada implements Pilha {
             return valorRetornado; //
         }
     }
+    
+    public void imprimir() {
+    	No impressao = topo; 
+    	boolean fim = false;
+    	while(fim != true){
+    		if(impressao.getProx() == null) {
+    			System.out.println(impressao.getValor());
+    			fim = true;
+    		}else{
+    			System.out.println(impressao.getValor());
+    			impressao = impressao.getProx();
+    		}
+			
+			
+        }
+    }
+    
 }

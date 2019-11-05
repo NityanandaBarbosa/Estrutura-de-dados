@@ -19,7 +19,7 @@ public class Fila {
 	}
 	
 	public boolean isFull() {
-		if(fim == tamanho) {
+		if(fim == tamanho - 1) {
 			return true;
 		}else {
 			return false;
@@ -30,7 +30,6 @@ public class Fila {
 		if(!isFull()) {
 			fim++;
 			valores[fim] = elemento;
-		
 		}else {
 			System.out.println("Fila está cheia");
 		}

@@ -85,11 +85,11 @@ public class ListaEncadeada {
     	}
     }
     
-    public Integer remover(int posicao) {
+    public Integer remover(int posicao) { //Não ira ser cobrado na prova
     	return 0;
     }
     
-    public void imprimir() {
+    public void imprimir() { //
     	No initshow = inicio;
     	String imprimirLista = "[";
 		 if(isEmpty()){
