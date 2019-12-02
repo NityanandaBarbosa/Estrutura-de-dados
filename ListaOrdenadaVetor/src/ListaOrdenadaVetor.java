@@ -1,14 +1,14 @@
-public class ListaOrdenadaVetor {
+public class ListaOrdenadaVetor implements ListaInterface {
 
-    private Integer[] Lista; //Vetor de Interger
+    private Integer[] Lista; 
     private int quantidade=0;
 
     public ListaOrdenadaVetor(int tamanho){
-        Lista = new Integer[tamanho]; //Criando o vetor de posições determinadas
+        Lista = new Integer[tamanho];
     }
 
     public boolean isFull() {
-        if(quantidade==Lista.length/*Se a quantidade de elementos for igual o tamanho da minha lista*/){ //Tá cheia
+        if(quantidade==Lista.length){
             return true;
         }else{
             return false;
@@ -24,6 +24,7 @@ public class ListaOrdenadaVetor {
     }
 
     public int size() {
+    	System.out.println(quantidade);
         return quantidade;
     }
 
@@ -75,7 +76,7 @@ public class ListaOrdenadaVetor {
         if(!isEmpty()){
             if(posicao>=0 && posicao<=quantidade) {
                 Aux = Lista[posicao];
-                for(int i = posicao; i <= quantidade; i++){
+                for(int i = posicao; i < quantidade; i++){
                     Lista[i] = Lista[i+1];
                 }
                 Lista[quantidade - 1] = null;
